@@ -81,6 +81,10 @@
 	  <a  href="/forum">Forum</a>
 	</li>
 	
+	<li class="">
+	  <a  href="/archives">DeleteItOnProd</a>
+	</li>
+	
 	<!-- BEGIN TOP SEARCH -->
 	<li class="menu-search">
 	  <span class="sep"></span>
@@ -127,49 +131,37 @@
   
     
     <h2 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/29/Copied-Notes/">Copied Notes</a>
+      <a class="archive-article-title" href="/2016/08/01/HexoTesting3/">HexoTesting3</a>
     </h2>
 
 
     <ul class="blog-info">
       <li>
       	<i class="fa fa-calendar"></i> 
-        <time datetime="2016-07-29T10:38:53.000Z" itemprop="datePublished">2016/07/29</time>
+        <time datetime="2016-08-01T08:30:58.000Z" itemprop="datePublished">2016/08/01</time>
 
       </li>
       <li><i class="fa fa-comments"></i>
-        <a href="/2016/07/29/Copied-Notes/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="/2016/08/01/HexoTesting3/#disqus_thread" class="article-comment-link">Comments</a>
       </li>
       <li>
 	<i class="fa fa-tags"></i>
 	
+  
+    <a href="/tags/tag1/" title="tag1">tag1</a>
+  
+
 
       </li>
     </ul>
     <div class="blog-item">
       
-	<div class="image-strip"><br><img src="https://s3.amazonaws.com/ptsteadman-images/hexo.png"><br></div>
-
-<h2 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h2><p>To Update NPM: <code>npm install npm@latest -g</code>.</p>
-<p>In 2015 it makes sense to use NVM.  <a href="http://linoxide.com/ubuntu-how-to/install-node-js-ubuntu" target="_blank" rel="external">NVM Installation<br>Instructions</a>.</p>
-<p>Update NPM: <code>npm install npm@latest -g</code></p>
-<p>Hexo: why can’t you use helper functions in source code?<br>This should be in docs.</p>
-<h2 id="Creating-a-Custom-Index-File-in-Hexo"><a href="#Creating-a-Custom-Index-File-in-Hexo" class="headerlink" title="Creating a Custom Index File in Hexo"></a>Creating a Custom Index File in Hexo</h2><p>Trying to generate a custom index file in source, hexo would ignore<br><code>source/index.md</code> no matter what I did.  What I had to do was uninstall<br><code>hexo-generator-index</code>.  <a href="https://github.com/hexojs/hexo/issues/1077" target="_blank" rel="external">See<br>here</a>.  Then it works.  So, that<br>will be part of the setup for my theme.  But, it’s worth it in order to properly<br>seperate the theme from the content, I think.  Having everyone edit the theme<br>index.ejs template is no good.</p>
-<h2 id="Hexo-Rendering-Raw-EJS-File-Problem-I-Encountered"><a href="#Hexo-Rendering-Raw-EJS-File-Problem-I-Encountered" class="headerlink" title="Hexo Rendering Raw EJS File Problem I Encountered"></a>Hexo Rendering Raw EJS File Problem I Encountered</h2><p>Sometimes the server would keep rendering an old version of my code, but as<br>text.  So I’d see stuff like</p>
-<pre><code>&lt;% if (site.tags.length){ %&gt;
-</code></pre><p>The raw ejs, essentially.  Restarting the server or running <code>hexo clean</code> didn’t<br>do anything.</p>
-<p>After some time, I realized it was due to the gedit swap files being read by<br>hexo as the actual layout files: for example, <code>tag.ejs~</code>.  My <code>partial</code> helpers<br>looked like: <code>&lt;%- partial(&#39;_partials/tag&#39;) %&gt;</code>, and apparently hexo was reading<br>in <code>tag.ejs~</code> instead of <code>tag.ejs</code>.  And therefore, the ejs wasn’t rendering.</p>
-<p>To fix this, I simply changed my partial helper to <code>&lt;%-
-partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
-<h2 id="Hexo-Excerpt-Variable"><a href="#Hexo-Excerpt-Variable" class="headerlink" title="Hexo Excerpt Variable"></a>Hexo Excerpt Variable</h2><p>I was confused by the behavior of the hexo <code>excerpt</code> variable.  If you define<br><code>excerpt: something</code> in the front matter, hexo ignores that.  Instead, to get it<br>to work, one needs to add a <code>&lt;!-- more --&gt;</code> comment in the source of the post.<br>Or, you can install a plugin that allows you to define custom excerpt in the<br>front matter.</p>
-<h2 id="Scripts-Directory"><a href="#Scripts-Directory" class="headerlink" title="Scripts Directory"></a>Scripts Directory</h2><p>One of the things I really discovered too late is the “Scripts” directory in the<br>theme folder.  In Hexo, the various plugins drive the structure of the site, as<br>opposed to the placement of different files and directories, as in Jekyll.  The<br>plugins programatically create folder structure, etc, where in Jekyll I mostly<br>used the liquid markup to structure the site.</p>
-<p>The problem is, then, that the user wants to extend hexo to do some sort of<br>custom thing.  If one had to publish a new plugin, that’d be too much work.  But<br>the theme level scripts folder allows one to extend the base hexo functionality<br>in ‘user space’ effectively.</p>
-
+	
       
     </div>
     <br>
     <br>
-    <a href="/2016/07/29/Copied-Notes/" class="more">Read more <i class="icon-angle-right"></i></a>
+    <a href="/2016/08/01/HexoTesting3/" class="more">Read more <i class="icon-angle-right"></i></a>
   </div>
 </div>
 <hr class="blog-post-sep">
@@ -184,18 +176,18 @@ partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
   
     
     <h2 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/29/Technology-Share-TechShare/">Technology Share - TechShare</a>
+      <a class="archive-article-title" href="/2016/01/02/Technology-Share-TechShare/">Technology Share - TechShare</a>
     </h2>
 
 
     <ul class="blog-info">
       <li>
       	<i class="fa fa-calendar"></i> 
-        <time datetime="2016-07-29T09:29:00.000Z" itemprop="datePublished">2016/07/29</time>
+        <time datetime="2016-01-01T21:00:00.000Z" itemprop="datePublished">2016/01/02</time>
 
       </li>
       <li><i class="fa fa-comments"></i>
-        <a href="/2016/07/29/Technology-Share-TechShare/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="/2016/01/02/Technology-Share-TechShare/#disqus_thread" class="article-comment-link">Comments</a>
       </li>
       <li>
 	<i class="fa fa-tags"></i>
@@ -211,13 +203,12 @@ partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
     </ul>
     <div class="blog-item">
       
-	<p><div class="image-strip"><br><img src="https://s3.amazonaws.com/ptsteadman-images/hexo.png"><br></div><br><a href="http://techsahre.blogspot.ru/" target="_blank" rel="external">Link to blog</a><br>Hi All, This is a quick demo for a utility component. I designed it for standard salesforce list views. Its a kind of context menu which can be opened on clicking of a IMAGE formula field. You can show your useful menu options in this context menu. Each option can have the record id automatically by JS, so that your target page or screen can have proper processing based on passed record id.</p>
-
+	Hi All, This is a quick demo for a utility component. I designed it for standard salesforce list views. Its a kind of context menu which can be opened on clicking of a IMAGE formula field. You can show your useful menu options in this context menu. Each option can have the record id automatically by JS, so that your target page or screen can have proper processing based on passed record id. [Link to blog](http://techsahre.blogspot.ru/)
       
     </div>
     <br>
     <br>
-    <a href="/2016/07/29/Technology-Share-TechShare/" class="more">Read more <i class="icon-angle-right"></i></a>
+    <a href="/2016/01/02/Technology-Share-TechShare/" class="more">Read more <i class="icon-angle-right"></i></a>
   </div>
 </div>
 <hr class="blog-post-sep">
@@ -267,6 +258,49 @@ partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
     <br>
     <br>
     <a href="/2016/01/02/test2/" class="more">Read more <i class="icon-angle-right"></i></a>
+  </div>
+</div>
+<hr class="blog-post-sep">
+
+      
+	<div class="row">
+  <div class="col-md-4 col-sm-4">
+    
+      <img src="https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_284x96dp.png" class="img-responsive">
+    
+  </div>
+  
+    <div class="col-md-8 col-sm-8">
+  
+    
+    <h2 itemprop="name">
+      <a class="archive-article-title" href="/2016/01/02/Copied-Notes/">CopiedNotes</a>
+    </h2>
+
+
+    <ul class="blog-info">
+      <li>
+      	<i class="fa fa-calendar"></i> 
+        <time datetime="2016-01-01T21:00:00.000Z" itemprop="datePublished">2016/01/02</time>
+
+      </li>
+      <li><i class="fa fa-comments"></i>
+        <a href="/2016/01/02/Copied-Notes/#disqus_thread" class="article-comment-link">Comments</a>
+      </li>
+      <li>
+	<i class="fa fa-tags"></i>
+	
+
+      </li>
+    </ul>
+    <div class="blog-item">
+      
+	Information into.  This posts covers setting up a hexo development environment, and the seperation of theme and content.
+      
+    </div>
+    <br>
+    <br>
+    <a href="/2016/01/02/Copied-Notes/" class="more">Read more <i class="icon-angle-right"></i></a>
   </div>
 </div>
 <hr class="blog-post-sep">
