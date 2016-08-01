@@ -260,6 +260,9 @@ h5 {
   overflow: hidden;
 }
 /* Index styles */
+.archives > .row {
+  border: solid 1px #64aee0;
+}
 .row-corporate {
   height: 600px;
   background-size: cover !important;

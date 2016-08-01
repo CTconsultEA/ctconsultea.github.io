@@ -24,7 +24,7 @@ Hexo: why can’t you use helper functions in sourc">
 In 2015 it makes sense to use NVM.  NVM InstallationInstructions.
 Update NPM: npm install npm@latest -g
 Hexo: why can’t you use helper functions in sourc">
-<meta property="og:updated_time" content="2016-08-01T08:35:20.962Z">
+<meta property="og:updated_time" content="2016-08-01T09:31:28.797Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CopiedNotes">
 <meta name="twitter:description" content="SetupTo Update NPM: npm install npm@latest -g.
@@ -128,139 +128,47 @@ Hexo: why can’t you use helper functions in sourc">
     <li class="active">Post</li>
   </ul>
   <section id="main">
+    <div class="row">
+  <div class="col-md-3 col-sm-3">
+    
+      <img src="https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_284x96dp.png" class="img-responsive">
+    
+  </div>
+  
+    <div class="col-md-8 col-sm-8">
+  
     
     <h2 itemprop="name">
-      <a class="article-title" href="/2016/01/02/Copied-Notes/">CopiedNotes</a>
+      <a class="archive-article-title" href="/2016/01/02/Copied-Notes/">CopiedNotes</a>
     </h2>
 
 
-    <div class="row">
-<div class="col-md-9 col-sm-9 blog-posts">
-<article id="post-Copied-Notes" class="article article-type-post blog-item" itemscope itemprop="blogPost">
-  <div class="article-meta">
-  </div>
-  <div class="article-inner">
-    
-    
-    <header class="article-header">
-      <ul class="blog-info">
-	<li><i class="fa fa-user"></i> Anonymous</li>
-	<li><i class="fa fa-calendar"></i>
-	  <time datetime="2016-01-01T21:00:00.000Z" itemprop="datePublished">2016/01/02</time>
+    <ul class="blog-info">
+      <li>
+      	<i class="fa fa-calendar"></i> 
+        <time datetime="2016-01-01T21:00:00.000Z" itemprop="datePublished">2016/01/02</time>
 
-	</li>
-	<li class="hidden-xs"><i class="fa fa-comments"></i>
-	  <a href="/2016/01/02/Copied-Notes/#disqus_thread" class="article-comment-link">Comments</a>
-	</li>
-	<li class="hidden-xs"><i class="fa fa-tags"></i> 
-	  
+      </li>
+      <li><i class="fa fa-comments"></i>
+        <a href="/2016/01/02/Copied-Notes/#disqus_thread" class="article-comment-link">Comments</a>
+      </li>
+      <li>
+	<i class="fa fa-tags"></i>
+	
 
-	</li>
-      </ul>
-      
-
-    </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h2><p>To Update NPM: <code>npm install npm@latest -g</code>.</p>
-<p>In 2015 it makes sense to use NVM.  <a href="http://linoxide.com/ubuntu-how-to/install-node-js-ubuntu" target="_blank" rel="external">NVM Installation<br>Instructions</a>.</p>
-<p>Update NPM: <code>npm install npm@latest -g</code></p>
-<p>Hexo: why can’t you use helper functions in source code?<br>This should be in docs.</p>
-<h2 id="Creating-a-Custom-Index-File-in-Hexo"><a href="#Creating-a-Custom-Index-File-in-Hexo" class="headerlink" title="Creating a Custom Index File in Hexo"></a>Creating a Custom Index File in Hexo</h2><p>Trying to generate a custom index file in source, hexo would ignore<br><code>source/index.md</code> no matter what I did.  What I had to do was uninstall<br><code>hexo-generator-index</code>.  <a href="https://github.com/hexojs/hexo/issues/1077" target="_blank" rel="external">See<br>here</a>.  Then it works.  So, that<br>will be part of the setup for my theme.  But, it’s worth it in order to properly<br>seperate the theme from the content, I think.  Having everyone edit the theme<br>index.ejs template is no good.</p>
-<h2 id="Hexo-Rendering-Raw-EJS-File-Problem-I-Encountered"><a href="#Hexo-Rendering-Raw-EJS-File-Problem-I-Encountered" class="headerlink" title="Hexo Rendering Raw EJS File Problem I Encountered"></a>Hexo Rendering Raw EJS File Problem I Encountered</h2><p>Sometimes the server would keep rendering an old version of my code, but as<br>text.  So I’d see stuff like</p>
-<pre><code>&lt;% if (site.tags.length){ %&gt;
-</code></pre><p>The raw ejs, essentially.  Restarting the server or running <code>hexo clean</code> didn’t<br>do anything.</p>
-<p>After some time, I realized it was due to the gedit swap files being read by<br>hexo as the actual layout files: for example, <code>tag.ejs~</code>.  My <code>partial</code> helpers<br>looked like: <code>&lt;%- partial(&#39;_partials/tag&#39;) %&gt;</code>, and apparently hexo was reading<br>in <code>tag.ejs~</code> instead of <code>tag.ejs</code>.  And therefore, the ejs wasn’t rendering.</p>
-<p>To fix this, I simply changed my partial helper to <code>&lt;%-
-partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
-<h2 id="Hexo-Excerpt-Variable"><a href="#Hexo-Excerpt-Variable" class="headerlink" title="Hexo Excerpt Variable"></a>Hexo Excerpt Variable</h2><p>I was confused by the behavior of the hexo <code>excerpt</code> variable.  If you define<br><code>excerpt: something</code> in the front matter, hexo ignores that.  Instead, to get it<br>to work, one needs to add a <code>&lt;!-- more --&gt;</code> comment in the source of the post.<br>Or, you can install a plugin that allows you to define custom excerpt in the<br>front matter.</p>
-<h2 id="Scripts-Directory"><a href="#Scripts-Directory" class="headerlink" title="Scripts Directory"></a>Scripts Directory</h2><p>One of the things I really discovered too late is the “Scripts” directory in the<br>theme folder.  In Hexo, the various plugins drive the structure of the site, as<br>opposed to the placement of different files and directories, as in Jekyll.  The<br>plugins programatically create folder structure, etc, where in Jekyll I mostly<br>used the liquid markup to structure the site.</p>
-<p>The problem is, then, that the user wants to extend hexo to do some sort of<br>custom thing.  If one had to publish a new plugin, that’d be too much work.  But<br>the theme level scripts folder allows one to extend the base hexo functionality<br>in ‘user space’ effectively.</p>
-
-      
-    </div>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2016/01/02/test2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Notes On Creating A Hexo Theme
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
-  
-  <br>
-</article>
-
-
-
-
-</div>
-<div class="col-md-3 col-sm-3 blog-sidebar">
-  <!-- CATEGORIES START -->
-<h2 class="no-top-space">Categories</h2>
-
-<div class="widget-wrap">
-  <div class="widget">
-    <ul class="nav sidebar-categories margin-bottom-40">
-      
-	<li>
-	  <a href="/categories/Salesforce/">Salesforce (1)</a>
-	</li>
-      
-	<li>
-	  <a href="/categories/Hexo/">Hexo (1)</a>
-	</li>
-      
+      </li>
     </ul>
-  </div>
-</div>
-
-
-<!-- CATEGORIES END -->
-
-<!-- BEGIN BLOG TAGS -->
-<div class="blog-tags margin-bottom-20">
-  <h2>Tags</h2>
-  
-  <div class="widget-wrap">
-    <div class="widget">
+    <div class="blog-item">
       
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/"><i class='fa fa-tags'></i>Blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design/"><i class='fa fa-tags'></i>Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/"><i class='fa fa-tags'></i>Programming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tag1/"><i class='fa fa-tags'></i>tag1</a></li></ul>
+	Information into.  This posts covers setting up a hexo development environment, and the seperation of theme and content.
+      
     </div>
+    <br>
+   <!-- <br>
+    <a href="/2016/01/02/Copied-Notes/" class="more">Read more <i class="icon-angle-right"></i></a>-->
   </div>
-
-
 </div>
-<!-- END BLOG TAGS -->
-
-
-<!-- BEGIN FEATURED POSTS -->                            
-<h2>Featured Posts</h2>
-<div class="recent-news margin-bottom-10">
-  
-    
-  
-    
-  
-    
-  
-    
-  
-</div>
-<!-- END FEATURED POSTS -->                            
-
-</div>
-</div>
+<hr class="blog-post-sep">
 
   </section>
 </div>
